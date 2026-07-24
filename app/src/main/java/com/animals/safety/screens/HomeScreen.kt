@@ -120,7 +120,7 @@ private fun HomeCell(
       Text(
         text = stringResource(R.string.information,  breedTranslatedName, animal.age, animal.weight, animal.height),
         style = MaterialTheme.typography.labelLarge,
-        fontWeight = FontWeight.Medium,
+        fontWeight = FontWeight.Normal,
       )
     }
   }
