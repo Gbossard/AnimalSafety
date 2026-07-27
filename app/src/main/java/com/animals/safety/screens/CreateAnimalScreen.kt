@@ -142,40 +142,40 @@ fun verifyAndCreateAnimal(
       snackbarHostState.showSnackbar(context.getString(R.string.issue_name_empty))
     }
 
-    return false;
+    return false
   }
 
-  val animalAge: Int;
+  val animalAge: Int
   try {
     animalAge = age.toInt()
-  } catch (e: NumberFormatException) {
+  } catch (_: NumberFormatException) {
     scope.launch {
       snackbarHostState.showSnackbar(context.getString(R.string.issue_invalid_age))
     }
 
-    return false;
+    return false
   }
 
-  val animalWeight: Float;
+  val animalWeight: Float
   try {
     animalWeight = weight.toFloat()
-  } catch (e: NumberFormatException) {
+  } catch (_: NumberFormatException) {
     scope.launch {
       snackbarHostState.showSnackbar(context.getString(R.string.issue_invalid_weight))
     }
 
-    return false;
+    return false
   }
 
-  val animalHeight: Float;
+  val animalHeight: Float
   try {
     animalHeight = height.toFloat()
-  } catch (e: NumberFormatException) {
+  } catch (_: NumberFormatException) {
     scope.launch {
       snackbarHostState.showSnackbar(context.getString(R.string.issue_invalid_height))
     }
 
-    return false;
+    return false
   }
 
   AnimalData.animals.add(
@@ -215,7 +215,7 @@ private fun CreateAnimal(
         .fillMaxSize()
         .verticalScroll(scrollState)
   ) {
-    var expanded by remember { mutableStateOf(false) }
+    var expanded by rememberSaveable { mutableStateOf(false) }
 
     OutlinedTextField(
       modifier = Modifier
